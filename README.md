@@ -3,5 +3,5 @@ Many people are being held in jail pretrial, meaning they have not yet been conv
 
 https://www.prisonpolicy.org/reports/incomejails.html
 
-![](https://github.com/hackforblacklivesmatterteamjava/CashBailSupport/blob/bahar/static/img/arrest_pretrialdetention.png)
-![](https://github.com/hackforblacklivesmatterteamjava/CashBailSupport/blob/bahar/static/img/jail_nobail_income.png)
+![](https://github.com/hackforblacklivesmatterteamjava/CashBailSupport/blob/master/cashbailbackend/src/main/resources/images/arrest_pretrialdetention.png)
+![](https://github.com/hackforblacklivesmatterteamjava/CashBailSupport/blob/master/cashbailbackend/src/main/resources/images/jail_nobail_income.png)
