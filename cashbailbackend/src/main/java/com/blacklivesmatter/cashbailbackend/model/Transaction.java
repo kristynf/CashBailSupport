@@ -9,4 +9,5 @@ import lombok.*;
 @Getter
 @EqualsAndHashCode
 public class Transaction {
+	int id;
 }

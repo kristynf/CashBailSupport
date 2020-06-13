@@ -8,4 +8,5 @@ import lombok.*;
 @Getter
 @EqualsAndHashCode
 public class BailRequest {
+	int id;
 }
