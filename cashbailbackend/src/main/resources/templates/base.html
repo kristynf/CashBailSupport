@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -42,6 +41,10 @@
         </ul>
     </div>
 </nav>
+
+<div class="container">
+    <div layout:fragment="page_content"></div>
+</div>
 
 <!--footer template-->
 <div class="footer" th:fragment="footer">
