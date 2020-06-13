@@ -3,6 +3,7 @@ package com.blacklivesmatter.cashbailbackend.model;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 
@@ -14,13 +15,15 @@ import java.math.BigDecimal;
 @Entity
 public class Donation {
 
+    @Id
+    private  int id;
     @ManyToOne(targetEntity = Donor.class)
-    Donor donor;
-    BigDecimal amount;
+    private Donor donor;
+    private BigDecimal amount;
     @ManyToOne(targetEntity = Organization.class)
-    Organization organization;
+    private Organization organization;
     @ManyToOne(targetEntity = Cause.class)
-    Cause cause;
+    private Cause cause;
 
 
 
