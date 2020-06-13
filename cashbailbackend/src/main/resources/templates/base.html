@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Potluck</title>
+    <title>The Liberators</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -19,7 +19,7 @@
 <div class="titlebanner" th:fragment="title">
     <h1 align="center" >The Liberators</h1>
 </div>
-
+<div class="navbar" th:fragment="navlinks">
 <!--navbar template-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -41,9 +41,9 @@
         </ul>
     </div>
 </nav>
-
+</div>
 <div class="container">
-    <div layout:fragment="page_content"></div>
+    <div th:fragment="page_content"></div>
 </div>
 
 <!--footer template-->
