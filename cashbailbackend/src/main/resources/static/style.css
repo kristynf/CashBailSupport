@@ -10227,36 +10227,6 @@ header.masthead h1 {
     border:0 !important;
 }
 
-/* Login CSS */
-/* Made with love by Mutiullah Samim*/
-
-
-#login-container{
-    height: 100%;
-    align-content: center;
-}
-
-#login-card{
-    height: auto;
-    margin-top: 5rem;
-    margin-bottom: auto;
-    width: 400px;
-    background-color: rgba(0,0,0,0.5) !important;
-    color: white;
-    padding: 20px;
-}
-
-#login-card-header h3{
-    color: white;
-}
-
-#login-input-group-prepend1 span, #login-input-group-prepend2 span{
-    width: 50px;
-    background-color: rgb(247, 211, 181);
-    color: black;
-    border:0 !important;
-}
-
 input:focus{
     outline: 0 0 0 0  !important;
     box-shadow: 0 0 0 0 !important;
@@ -10304,4 +10274,13 @@ input:focus{
 }
 .media {
     margin: 15px;
+}
+
+/* Register Page */
+#register-body{
+    background-image: url(./images/orangeduo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
 }
