@@ -17,8 +17,6 @@ public class Donation {
 
     @Id
     private  int id;
-    @ManyToOne(targetEntity = Donor.class)
-    private Donor donor;
     private BigDecimal amount;
     @ManyToOne(targetEntity = Organization.class)
     private Organization organization;

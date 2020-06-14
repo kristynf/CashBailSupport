@@ -10,6 +10,7 @@ import javax.persistence.Embeddable;
 @Getter
 @EqualsAndHashCode
 @Embeddable
+@ToString
 public class Address {
     String buildingNumber;
     String streetName;
