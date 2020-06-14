@@ -5,8 +5,12 @@ import org.springframework.stereotype.Repository;
 
 import com.blacklivesmatter.cashbailbackend.model.AppUser;
 
+import java.util.Optional;
+
 @Repository
 public interface UserRepository extends JpaRepository<AppUser, Long> {
 	
-	AppUser findByUsername(String username);
+	Optional<AppUser> findByUsername(String username);
+
+	Optional<AppUser> findByEmail(String email);
 }
