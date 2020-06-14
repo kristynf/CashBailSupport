@@ -1,5 +1,6 @@
 package com.blacklivesmatter.cashbailbackend.service;
 
+import com.blacklivesmatter.cashbailbackend.enums.Role;
 import com.blacklivesmatter.cashbailbackend.model.AppUser;
 import com.blacklivesmatter.cashbailbackend.repository.UserRepository;
 import org.junit.jupiter.api.*;
@@ -59,6 +60,7 @@ public class AuthServiceTests {
         assertNotNull(fromRepo.getId());
         assertNotNull(fromRepo.getCreated());
         assertTrue(fromRepo.isEnabled());
+        assertEquals(Role.DONOR, fromRepo.getRole());
 
     }
 
