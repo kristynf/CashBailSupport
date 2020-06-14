@@ -4,11 +4,14 @@ import com.blacklivesmatter.cashbailbackend.enums.Role;
 import com.blacklivesmatter.cashbailbackend.model.AppUser;
 import com.blacklivesmatter.cashbailbackend.repository.UserRepository;
 import lombok.AllArgsConstructor;
+
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -44,9 +47,26 @@ public class AuthService {
 
 
         return userRepository.save(user);
-
-
     }
+    
+    public void createAdminUser(AppUser newUser) {
+		newUser.setPassword(this.passwordEncoder.encode(newUser.getPassword()));
+		newUser.setRole(Role.ADMIN);
+		
+		this.userRepository.save(newUser);
+	}
+	
+	public List<AppUser> getAdminUsers() {
+		return this.userRepository.findByRole(Role.ADMIN);
+	}
 
 
+    public boolean isAdmin(User user) {
+    	if(user == null) {
+    		return false;
+    	}
+    	
+    	Optional<AppUser> appUser = this.userRepository.findByUsername(user.getUsername());
+    	return appUser.isPresent() && appUser.get().getRole() == Role.ADMIN;
+    }
 }

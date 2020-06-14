@@ -28,7 +28,7 @@
         <div class="col-4" ></div>
         <div class="col-4" >
 
-            <form autocomplete="off" action="#" th:action="@{/register}" th:object="${user}" method="post">
+            <form autocomplete="off" action="#" th:action="@{/admin/user}" th:object="${user}" method="post">
 
                 <div class="form-group">
                 <span th:if="${#fields.hasErrors('firstName')}"
