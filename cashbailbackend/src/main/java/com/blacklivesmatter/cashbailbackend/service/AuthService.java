@@ -1,5 +1,6 @@
 package com.blacklivesmatter.cashbailbackend.service;
 
+import com.blacklivesmatter.cashbailbackend.enums.Role;
 import com.blacklivesmatter.cashbailbackend.model.AppUser;
 import com.blacklivesmatter.cashbailbackend.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -28,6 +29,7 @@ public class AuthService {
         user.setPassword(passwordEncoder.encode(fromForm.getPassword()));
         user.setCreated(Instant.now());
         user.setEnabled(true);
+        user.setRole(Role.DONOR);
 
         Optional<AppUser> byUsername = userRepository.findByUsername(fromForm.getUsername());
 
