@@ -29,3 +29,8 @@ build/
 
 ### VS Code ###
 .vscode/
+.bash_profile
+.bash_profile/r
+.bash_profile.swp
+.bash_profile\r
+.bash_profile\r
