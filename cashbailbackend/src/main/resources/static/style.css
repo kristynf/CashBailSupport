@@ -10176,7 +10176,41 @@ header.masthead h1 {
 
 /* Login CSS */
 /* Made with love by Mutiullah Samim*/
+#login-body{
+    background-image: url(./images/orange.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
 
+#login-container{
+    height: 100%;
+    align-content: center;
+}
+
+#login-card{
+    height: auto;
+    margin-top: 5rem;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+    color: white;
+    padding: 20px;
+}
+
+#login-card-header h3{
+    color: white;
+}
+
+#login-input-group-prepend1 span, #login-input-group-prepend2 span{
+    width: 50px;
+    background-color: rgb(247, 211, 181);
+    color: black;
+    border:0 !important;
+}
+
+<<<<<<< HEAD
 /* Login CSS */
 /* Made with love by Mutiullah Samim*/
 
@@ -10229,4 +10263,3 @@ input:focus{
     color: rgb(211, 143, 87) ;
     display: block;
 }
-

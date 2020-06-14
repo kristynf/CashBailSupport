@@ -36,3 +36,4 @@ build/
 .bash_profile\r
 
 /application.properties
+.DS_Store
