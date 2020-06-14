@@ -12,7 +12,9 @@
             <div th:replace="base :: title"></div>
         </div>
     </div>
+<form th:action="@{/login}" method="post">
 
+<<<<<<< HEAD
     <div class="container" id="login-container">
         <div class="d-flex justify-content-center h-100">
             <div class="card" id="login-card">
@@ -53,10 +55,24 @@
                     <div class="d-flex justify-content-center">
                         <a href="#" class="login-link">Forgot your password?</a>
                     </div>
+=======
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="Username" required>
                 </div>
-            </div>
-        </div>
-    </div>
+
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+
+                <div>
+                    <a href="/registration" style="color: white"><strong>Create new account</strong></a>
+
+                    <button type="submit" value="Submit" class="btn btn-lg btn-primary" style="float: right"><strong>Login</strong>
+                    </button>
+>>>>>>> 781b74d4cb057089ddb015ced398531d44f86ddf
+                </div>
+
+            </form>
 
 
 <!--footer template-->
