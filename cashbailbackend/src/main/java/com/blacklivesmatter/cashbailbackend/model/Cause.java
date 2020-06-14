@@ -1,18 +1,21 @@
 package com.blacklivesmatter.cashbailbackend.model;
 
-import lombok.*;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.Instant;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @NoArgsConstructor
-@AllArgsConstructor
 @Setter
 @Getter
 @EqualsAndHashCode
@@ -20,13 +23,13 @@ import java.util.List;
 public class Cause {
 
     @Id
-    int id;
-    String description;
-    BigDecimal amountRequired;
-    BigDecimal amountReceived;
-    LocalDate dateOpened;
-    @ManyToOne
-    Organization associatedOrganization;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    private String description;
+    private BigDecimal amountRequired;
+    private BigDecimal amountReceived;
+    private Instant dateOpened;
+
 
     @OneToMany(targetEntity = Donation.class)
     List<Donation> donations;
