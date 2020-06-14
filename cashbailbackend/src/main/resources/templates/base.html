@@ -1,7 +1,12 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+=======
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:fragment="header">
+>>>>>>> 5ddfba5cf0ad0051fae24e5b385d60cbe77ca4aa
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
@@ -22,8 +27,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+<<<<<<< HEAD
 <body id="page-top">
     <!-- Navigation-->
+=======
+<body>
+
+<div class="navbar" th:fragment="navlinks">
+<!--navbar template-->
+>>>>>>> 5ddfba5cf0ad0051fae24e5b385d60cbe77ca4aa
     <nav class="navbar navbar-expand-lg fixed-top py-3" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">The Liberators</a>
@@ -33,6 +45,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
+<<<<<<< HEAD
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#media">Media</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
@@ -160,11 +173,32 @@
     </div>
 
     <!-- Footer-->
+=======
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/media">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/register">Register</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/donate">Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+</div>
+
+<div class="container">
+    <div th:fragment="page_content"></div>
+</div>
+
+<!--footer template-->
+<div class="footer" th:fragment="footer">
+>>>>>>> 5ddfba5cf0ad0051fae24e5b385d60cbe77ca4aa
     <footer class="bg-light py-5">
         <div class="container">
             <div class="small text-center text-muted">Copyright © 2020 - The Liberators</div>
         </div>
     </footer>
+<<<<<<< HEAD
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
@@ -175,4 +209,19 @@
     <script src="js/scripts.js"></script>
 </body>
 
+=======
+</div>
+
+<script th:src="@{https://kit.fontawesome.com/48c5dd92ba.js}" crossorigin="anonymous"></script>
+<script th:src="@{https://code.jquery.com/jquery-3.2.1.slim.min.js}"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js}"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+>>>>>>> 5ddfba5cf0ad0051fae24e5b385d60cbe77ca4aa
 </html>

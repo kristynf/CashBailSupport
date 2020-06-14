@@ -485,8 +485,13 @@ mark,
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
+<<<<<<< HEAD
   max-width: 100%;
   height: auto;
+=======
+  max-width: auto%;
+  height: 170px;
+>>>>>>> 5ddfba5cf0ad0051fae24e5b385d60cbe77ca4aa
 }
 
 .figure {
@@ -10166,4 +10171,13 @@ header.masthead h1 {
 
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
+<<<<<<< HEAD
 }
+=======
+}
+
+.navbar {
+  padding: 0;
+}
+
+>>>>>>> 5ddfba5cf0ad0051fae24e5b385d60cbe77ca4aa
