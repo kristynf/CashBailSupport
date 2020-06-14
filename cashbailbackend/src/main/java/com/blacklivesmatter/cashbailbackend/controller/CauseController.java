@@ -70,7 +70,7 @@ public class CauseController {
 	public ModelAndView showEditCause(@PathVariable Long id, @AuthenticationPrincipal User user) {
 		Optional<Cause> causeOptional = this.causeRepository.findById(id);
 		
-		if(causeOptional.isEmpty()) {
+		if(!causeOptional.isPresent()) {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND); 
 		}
 		
@@ -83,7 +83,7 @@ public class CauseController {
 	public String saveCause(@PathVariable Long id, @Valid @ModelAttribute("cause") Cause updatedCause, BindingResult bindingResult, @AuthenticationPrincipal User user) {
 		Optional<Cause> causeOptional = this.causeRepository.findById(id);
 		
-		if(causeOptional.isEmpty()) {
+		if(!causeOptional.isPresent()) {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND); 
 		}
 		
