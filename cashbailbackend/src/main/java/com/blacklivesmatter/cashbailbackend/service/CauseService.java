@@ -16,7 +16,6 @@ public class CauseService {
     private CauseRepository causeRepository;
     private DonationService donationService;
 
-    //TODO -- Need to make sure when cause is pull total amount donated is set via Donation Service method
 
 
     public Cause saveCause(Cause cause){
