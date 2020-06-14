@@ -10258,3 +10258,18 @@ input:focus{
     margin: 5px;
     color: rgb(211, 143, 87) ;
 }
+
+/* Cause Page */
+
+.cause-page {
+    margin: 10px;
+
+}
+
+.mr-3 {
+    width: 3rem;
+    height: auto;
+}
+.media {
+    margin: 15px;
+}
