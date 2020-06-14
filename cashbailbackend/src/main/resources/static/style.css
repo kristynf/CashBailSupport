@@ -10220,7 +10220,6 @@ input:focus{
     color: rgb(252, 214, 205);
     background-color: rgb(211, 143, 87);
     width: 100px;
-    display: ;
 }
 
 #login-btn:hover{
@@ -10231,4 +10230,5 @@ input:focus{
 .login-link {
     margin: 5px;
     color: rgb(211, 143, 87) ;
+    display: block;
 }
