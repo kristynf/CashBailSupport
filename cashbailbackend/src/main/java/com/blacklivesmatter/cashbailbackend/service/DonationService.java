@@ -21,6 +21,7 @@ public class DonationService {
 
     private final DonationRepository donationRepository;
     private final UserRepository userRepository;
+    private final CauseService causeService;
 
 
     public BigDecimal getCauseDonationTotal(Cause cause){
@@ -62,6 +63,7 @@ public class DonationService {
     public Donation donate(Donation donation){
         if(donation.getAmount().compareTo(new BigDecimal("5.00")) < 0)
             throw new IllegalArgumentException("Donation should be greater that $5");
+
 
 
         return donationRepository.save(donation);

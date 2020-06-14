@@ -3,7 +3,6 @@ package com.blacklivesmatter.cashbailbackend.service;
 import com.blacklivesmatter.cashbailbackend.model.Cause;
 import com.blacklivesmatter.cashbailbackend.repository.CauseRepository;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +14,7 @@ import java.util.Optional;
 public class CauseService {
 
     private CauseRepository causeRepository;
+    private DonationService donationService;
 
     //TODO -- Need to make sure when cause is pull total amount donated is set via Donation Service method
 
@@ -27,16 +27,30 @@ public class CauseService {
         return causeRepository.save(cause);
     }
 
-    public void deleteCause(Cause cause){
+    public void deleteCause(Cause fromUser){
+        Optional<Cause> cause = causeRepository.findById(fromUser.getId());
+        if(!cause.isPresent())
+            throw new IllegalArgumentException("Cause doesn't exist. Nothing to delete");
 
+        causeRepository.delete(fromUser);
     }
 
-    public void updateCause(Cause cause){
+    public void updateCause(Cause fromUser){
+        Optional<Cause> cause = causeRepository.findById(fromUser.getId());
+        if(!cause.isPresent())
+            throw new IllegalArgumentException("Cause doesn't exist. Nothing to update");
 
+        fromUser.setAmountReceived(donationService.getCauseDonationTotal(fromUser));
+
+        causeRepository.save(fromUser);
     }
 
-    public Cause getCause(Cause cause){
-        return new Cause();
+    public Cause getCause(Cause fromUser){
+        Optional<Cause> cause = causeRepository.findById(fromUser.getId());
+        if(!cause.isPresent())
+            throw new IllegalArgumentException("Cause doesn't exist. Nothing to update");
+
+        return cause.get();
     }
 
 
