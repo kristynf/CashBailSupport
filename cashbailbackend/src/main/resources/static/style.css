@@ -10196,6 +10196,7 @@ header.masthead h1 {
     width: 400px;
     background-color: rgba(0,0,0,0.5) !important;
     color: white;
+   # padding: 20px;
 }
 
 .social_icon span{
@@ -10217,6 +10218,36 @@ header.masthead h1 {
     position: absolute;
     right: 20px;
     top: -45px;
+}
+
+#login-input-group-prepend1 span, #login-input-group-prepend2 span{
+    width: 50px;
+    background-color: rgb(247, 211, 181);
+    color: black;
+    border:0 !important;
+}
+
+/* Login CSS */
+/* Made with love by Mutiullah Samim*/
+
+
+#login-container{
+    height: 100%;
+    align-content: center;
+}
+
+#login-card{
+    height: auto;
+    margin-top: 5rem;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+    color: white;
+    padding: 20px;
+}
+
+#login-card-header h3{
+    color: white;
 }
 
 #login-input-group-prepend1 span, #login-input-group-prepend2 span{
@@ -10257,6 +10288,7 @@ input:focus{
 .login-link {
     margin: 5px;
     color: rgb(211, 143, 87) ;
+    display: block;
 }
 
 /* Cause Page */

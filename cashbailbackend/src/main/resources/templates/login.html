@@ -1,83 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<div th:replace="base :: head">
+<div th:replace="base :: head"></div>
 
-
-</div>
-<body>
-<div class="container" id="login-body">
-<<<<<<< HEAD
-
-
-=======
-    <body id="page-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-12" style="text-align: center">
-                <div th:replace="base :: navlinks"></div>
-            </div>
-        </div>
-    </div>
+<body id="login-body">
+<div class="container">
     <div class="row">
         <div class="col-12" style="text-align: center">
-            <div th:replace="base :: title"></div>
+            <div th:replace="base :: navlinks"></div>
         </div>
     </div>
->>>>>>> 6154a5681732bec6e46b4ae799f5159392077bc2
+</div>
 
-    <div class="container">
-        <div class="d-flex justify-content-center h-100">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Log In</h3>
-                    <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="username">
-    
-                        </div>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" class="form-control" placeholder="password">
-                        </div>
-                        <div class="row align-items-center remember">
-                            <input type="checkbox">Remember Me</div>
-                        <div class="form-group">
-                            <input type="submit" value="Login" class="btn float-right login_btn">
-                        </div>
-                    </form>
-                </div>
-                <div class="card-footer">
-                    <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="#">Sign Up</a>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <a href="#">Forgot your password?</a>
-                    </div>
-                </div>
+<div class="container" id="login-container">
+    <div class="d-flex justify-content-center" style="margin-top:200px">
+        <div class="card" id="login-card">
+            <div class="card-header">
+                <h3>Log In</h3>
             </div>
-        </div>
-    </div>
+            <div class="login-card-body">
+                <form action="/login" method="post">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend" id="login-input-group-prepend1">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" name="username" placeholder="username">
 
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend" id="login-input-group-prepend2">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="password" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn float-right login_btn" id="login-btn">Login</button>
+                    </div>
+                </form>
+            </div>
+      </div>
+      </div>
+      </div>
 
 <!--footer template-->
-<div class="footer" th:fragment="footer">
-    <footer class="bg-light py-5">
-        <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - The Liberators</div>
-        </div>
-    </footer>
+<div>
+    <div th:replace="base :: footer"></div>
 </div>
 
 <script th:src="@{https://kit.fontawesome.com/48c5dd92ba.js}" crossorigin="anonymous"></script>
