@@ -13,20 +13,13 @@
         </div>
     </div>
 <form th:action="@{/login}" method="post">
-
-<<<<<<< HEAD
     <div class="container" id="login-container">
         <div class="d-flex justify-content-center h-100">
             <div class="card" id="login-card">
-                <div class="card-header" id="login-card-header">
+                <div class="card-header">
                     <h3>Log In</h3>
-                    <div class="d-flex justify-content-end social_icon" id="login-social-icon">
-                        <span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>
-                    </div>
                 </div>
-                <div class="card-body" id="login-card-body">
+                <div class="login-card-body">
                     <form>
                         <div class="input-group form-group">
                             <div class="input-group-prepend" id="login-input-group-prepend1">
@@ -36,13 +29,11 @@
     
                         </div>
                         <div class="input-group form-group">
-                            <div class="input-group-prepend" id="login-input-group-prepend1">
+                            <div class="input-group-prepend" id="login-input-group-prepend2">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
                             <input type="password" class="form-control" placeholder="password">
                         </div>
-                        <div class="row align-items-center remember" id="login-remember">
-                            <input type="checkbox">Remember Me</div>
                         <div class="form-group">
                             <input type="submit" value="Login" class="btn float-right login_btn" id="login-btn">
                         </div>
@@ -50,26 +41,11 @@
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="#" class="login-link">Sign Up</a>
-                    </div>
+                        Don't have an account?</div>
+                        <a href="#" class="login-link" id="login-link">Sign Up</a>
                     <div class="d-flex justify-content-center">
-                        <a href="#" class="login-link">Forgot your password?</a>
+                        <a href="#" class="login-link" id="login-link">Forgot your password?</a>
                     </div>
-=======
-                <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="Username" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password" required>
-                </div>
-
-                <div>
-                    <a href="/registration" style="color: white"><strong>Create new account</strong></a>
-
-                    <button type="submit" value="Submit" class="btn btn-lg btn-primary" style="float: right"><strong>Login</strong>
-                    </button>
->>>>>>> 781b74d4cb057089ddb015ced398531d44f86ddf
                 </div>
 
             </form>
@@ -77,9 +53,9 @@
 
 <!--footer template-->
 <div class="footer" th:fragment="footer">
-    <footer class="bg py-5">
+    <footer class="bg-light py-5">
         <div class="container">
-            <div class="small text-center text-muted" id="login-footer">Copyright © 2020 - The Liberators</div>
+            <div class="small text-center text-muted">Copyright © 2020 - The Liberators</div>
         </div>
     </footer>
 </div>
