@@ -1,5 +1,7 @@
 package com.blacklivesmatter.cashbailbackend.model;
 
+import java.time.Instant;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -13,8 +15,6 @@ import com.blacklivesmatter.cashbailbackend.enums.Role;
 
 import lombok.Getter;
 import lombok.Setter;
-
-import java.time.Instant;
 
 @Getter
 @Setter
