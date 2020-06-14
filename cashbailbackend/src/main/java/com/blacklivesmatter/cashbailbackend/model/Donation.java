@@ -2,11 +2,9 @@ package com.blacklivesmatter.cashbailbackend.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @NoArgsConstructor
@@ -18,16 +16,17 @@ import java.math.BigDecimal;
 public class Donation {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;
 
-    @NotBlank
+    @NotNull
     private BigDecimal amount;
 
-    @NotBlank
+    @NotNull
     @ManyToOne(targetEntity = AppUser.class)
     private AppUser user;
 
-    @NotBlank
+    @NotNull
     @ManyToOne(targetEntity = Cause.class)
     private Cause cause;
 
