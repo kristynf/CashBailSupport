@@ -5,64 +5,66 @@
 
 </div>
 <body>
-<div class="container">
-
+<div class="container" id="login-body">
+    <body id="page-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="text-align: center">
+                <div th:replace="base :: navlinks"></div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-12" style="text-align: center">
             <div th:replace="base :: title"></div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-12" style="text-align: center">
-            <div th:replace="base :: navlinks"></div>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Log In</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="username">
+    
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password">
+                        </div>
+                        <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me</div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account?<a href="#">Sign Up</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="container">
 
-    <h1 class="display-4" style="text-align: center"><strong>Please Login</strong></h1>
-    <hr class="mt-2 mb-5">
-
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-
-            <div th:if="${param.error}">
-                Invalid username or password
-            </div>
-            <div th:if="${param.logout}">
-                You have been logged out
-            </div>
-
-            <form th:action="@{/login}" method="post">
-
-                <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="Username" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password" required>
-                </div>
-
-                <div>
-                    <a href="/register" style="color: white"><strong>Create new account &#187;</strong></a>
-
-                    <button type="submit" value="Submit" class="btn btn-lg btn-primary" style="float: right"><strong>Login</strong>
-                    </button>
-                </div>
-
-            </form>
-
-        </div>
-        <div class="col-4"></div>
-    </div>
-
-
-</div>
-<div class="container">
-    <div th:fragment="page_content"></div>
-</div>
 
 <!--footer template-->
 <div class="footer" th:fragment="footer">

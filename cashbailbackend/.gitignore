@@ -29,6 +29,15 @@ build/
 
 ### VS Code ###
 .vscode/
+<<<<<<< HEAD
+.bash_profile
+.bash_profile/r
+.bash_profile.swp
+.bash_profile\r
+.bash_profile\r
+=======
 
 ###local application.properties####
 /application.properties
+>>>>>>> 5ddfba5cf0ad0051fae24e5b385d60cbe77ca4aa
+.DS_Store
