@@ -21,7 +21,6 @@ public class DonationService {
 
     private final DonationRepository donationRepository;
     private final UserRepository userRepository;
-    private final CauseService causeService;
 
 
     public BigDecimal getCauseDonationTotal(Cause cause){
