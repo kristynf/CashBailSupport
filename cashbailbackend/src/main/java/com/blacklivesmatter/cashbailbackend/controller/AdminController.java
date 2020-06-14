@@ -43,6 +43,8 @@ public class AdminController {
 			return "admin";
 		}
 		
+		this.authService.createAdminUser(newUser);
+		
 		return "redirect:/admin";
 	}
 }
