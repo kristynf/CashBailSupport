@@ -1,6 +1,8 @@
 # CashBailSupport
 Many people are being held in jail pretrial, meaning they have not yet been convicted of a crime and are legally presumed innocent.  This is because our country largely has a system of money bail,  in which the constitutional principle of “innocent until proven guilty” only really applies to the well off. With money bail, a defendant is required to pay a certain amount of money as a guarantee She/He will attend future court hearings.  When they are unable to come up with the money, they can be incarcerated from their arrest until his case is resolved or dismissed in court.  We created an app that helps to connect these individuals with a community, who wants to help pay the cash bail, so an presumed innocent or poor person doesn’t stay in jail while awaiting trail (or worse, forced to plead guilty) because of lack of money.
 
+This software is meant to be used with a local non-profit on the ground who work with those who are in need of funds. These non-profits would run the software, be responsible for vetting the recipients of the funds, and showcasing those in need. It is hoped that advocates who come across this software would reach out to the non-profits via this platform for assistance for those needing assistance.
+
 https://www.prisonpolicy.org/reports/incomejails.html
 
 ## Preview
