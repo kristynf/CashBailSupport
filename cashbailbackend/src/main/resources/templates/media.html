@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="base :: head">
+
+
+</div>
+<body>
+<div class="container" id="media-page">
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Detaining the Poor</h5>
+                <p class="card-text">How money bail perpetuates an endless cycle of poverty and jail time</p>
+                <a href="https://www.prisonpolicy.org/reports/incomejails.html" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">BAIL REFORM</h5>
+                <p class="card-text">WOn any given day in 2015, roughly 700,000 people were locked up in local jails. The majority of them had not been
+                convicted of a crime.</p>
+                <a href="https://www.aclu.org/issues/smart-justice/bail-reform" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--footer template-->
+<div class="footer" th:fragment="footer">
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="small text-center text-muted">Copyright © 2020 - The Liberators</div>
+        </div>
+    </footer>
+</div>
+
+<script th:src="@{https://kit.fontawesome.com/48c5dd92ba.js}" crossorigin="anonymous"></script>
+<script th:src="@{https://code.jquery.com/jquery-3.2.1.slim.min.js}"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js}"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
